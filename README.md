@@ -1,8 +1,8 @@
 # Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading (ACL 2020)
 
-This repository is the official implementation of Our ACL 2020 Paper [Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading](https://arxiv.org/abs/2005.12484).
+This repository is the implementation of our ACL 2020 Paper [Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading](https://arxiv.org/abs/2005.12484).
 
-EMT achieves new state-of-the-art results on [ShARC conversational machine reading benchmark](https://sharc-data.github.io/leaderboard.html).
+`EMT+entailment` achieves new state-of-the-art results on [ShARC conversational machine reading benchmark](https://sharc-data.github.io/leaderboard.html) (Mar 2019).
 
 ![Image of EMT](fig/model_entail.png)
 
@@ -50,7 +50,7 @@ rm sharc1-official.zip
 mv sharc1-official sharc
 ```
 
-> Download BERT, UniLM, and our pretrained models (optional)
+> Download BERT, UniLM
 ```bash
 mkdir pretrained_models
 # BERT
@@ -108,7 +108,9 @@ PYT_QG preprocess_qg.py
 ## Training
 
 > Decision Making + Underspecified Span Extraction
+
 Configue `PYT_EMT` in `train_dm.sh` first, and run
+
 ```
 mkdir -p saved_models
 ./train_dm.sh <GPU_ID>
@@ -119,7 +121,9 @@ The trained decision making model should be at `saved_models/lew_10_lsw_0.6/seed
 The decision making predictions should be at `saved_models/lew_10_lsw_0.6/seed_28/dev.preds.json` by default.
 
 > Question Generation
+
 Configue `PYT_QG` in `train_qg.sh` first, and run
+
 ```
 mkdir -p saved_models
 ./train_qg.sh <GPU_ID>
@@ -134,10 +138,12 @@ The trained question generation model should be at `saved_models/unilm_16_0.0000
 
 ### End-to-End Task
 
-To evaluate EMT on the end-to-end task, configue `PYT_QG` in `inference_e2e.sh`, and run,run
+To evaluate EMT on the end-to-end task, configue `PYT_QG` in `inference_e2e.sh`, and run
+
 ```eval
 ./inference_e2e.sh <GPU_ID> pretrained_models/dm.pt pretrained_models/qg.bin
 ```
+
 Our model achieves the following performance on the development set using our pre-trained models:
 
 | Micro Acc. | Macro Acc. | BLEU1 | BLEU4 |
@@ -147,7 +153,9 @@ Our model achieves the following performance on the development set using our pr
 You can replace `dm.pt` & `qg.bin` with your trained models to get your own results.
 
 ### Oracle Question Generation Task
+
 To evaluate EMT on the oracle QG task, configue `PYT_QG` in `inference_oracle_qg.sh`, and run,run
+
 ```bash
 ./inference_oracle_qg.sh <GPU_ID> <path-to-dev.preds.json> <path-to-trained-qg-model>
 # OR, use our pretrained QG model and our dev predicted data
