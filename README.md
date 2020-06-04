@@ -2,7 +2,7 @@
 
 This repository is the implementation of our ACL 2020 Paper [Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading](https://arxiv.org/abs/2005.12484).
 
-`EMT+entailment` achieves new state-of-the-art results on [ShARC conversational machine reading benchmark](https://sharc-data.github.io/leaderboard.html) (Mar 2019).
+`EMT+entailment` achieves new state-of-the-art results on [ShARC conversational machine reading benchmark](https://sharc-data.github.io/leaderboard.html) (Mar 2020).
 
 ![Image of EMT](fig/model_entail.png)
 
