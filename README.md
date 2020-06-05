@@ -1,8 +1,25 @@
 # Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading (ACL 2020)
 
-This repository is the implementation of our ACL 2020 Paper [Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading](https://arxiv.org/abs/2005.12484).
+This repository is the official implementation of the ACL 2020 Paper [Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading](https://arxiv.org/abs/2005.12484).
 
 `EMT+entailment` achieves new state-of-the-art results on [ShARC conversational machine reading benchmark](https://sharc-data.github.io/leaderboard.html) (Mar 2020).
+
+
+## Citation
+
+If you find our code useful, please cite our paper as follows:
+
+```bibtex
+@article{gao-etal-2020-explicit,
+  title={Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading},
+  author={Yifan Gao and Chien-Sheng Wu and Shafiq R. Joty and Caiming Xiong and Richard Socher and Irwin King and Michael R. Lyu and Steven C. H. Hoi},
+  journal={ArXiv},
+  year={2020},
+  volume={abs/2005.12484}
+}
+```
+
+## Model Architecture
 
 ![Image of EMT](fig/model_entail.png)
 
@@ -169,18 +186,12 @@ Oracle question generation results on the Dev. set:
 | 63.50 | 48.65 |
 
 
-## Reference & Acknowledgements
-
-If you find our code useful, please cite our paper as follows:
-
-```bibtex
-@article{gao-etal-2020-explicit,
-  title={Explicit Memory Tracker with Coarse-to-Fine Reasoning for Conversational Machine Reading},
-  author={Yifan Gao and Chien-Sheng Wu and Shafiq R. Joty and Caiming Xiong and Richard Socher and Irwin King and Michael R. Lyu and Steven C. H. Hoi},
-  journal={ArXiv},
-  year={2020},
-  volume={abs/2005.12484}
-}
-```
+## Acknowledgements
 
 Portions of the source code are based on the [E3](https://github.com/vzhong/e3) project.
+
+The work was done when the first author was an intern at [Salesforce Research](https://einstein.ai/).
+
+If you have any issue, please open an issue or contact yifangao95@gmail.com
+
+
