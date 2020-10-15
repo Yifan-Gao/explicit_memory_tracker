@@ -158,7 +158,7 @@ The trained question generation model should be at `saved_models/unilm_16_0.0000
 To evaluate EMT on the end-to-end task, configue `PYT_QG` in `inference_e2e.sh`, and run
 
 ```eval
-./inference_e2e.sh <GPU_ID> pretrained_models/dm.pt pretrained_models/qg.bin
+./inference_e2e.sh <GPU_ID> pretrained_models/dm.pt pretrained_models/qg.bin path/to/bert/base/uncased/pt
 ```
 
 Our model achieves the following performance on the development set using our pre-trained models:

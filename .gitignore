@@ -1,0 +1,12 @@
+tmp*
+*.json
+__pycache__
+*/__pycache__
+*/*/__pycache__
+.DS_Store
+.idea/*
+.idea
+tmp/*
+*.bak
+reproduce/*
+cmd/
